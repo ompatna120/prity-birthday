@@ -1,0 +1,738 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    ```
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="theme-color" content="#180016" />
+
+    <title>For My Montuu ❤️</title>
+
+    <link rel="stylesheet" href="style.css" />
+    ```
+  </head>
+
+  <body>
+    ```
+    <!-- =========================================
+     LOADING
+========================================= -->
+
+    <div id="loader">
+      <div class="loader-heart">❤️</div>
+
+      <p>Preparing something special...</p>
+    </div>
+
+    <!-- =========================================
+     MUSIC
+========================================= -->
+
+    <audio id="bgMusic" loop>
+      <source src="music/birthday.mp3" type="audio/mpeg" />
+    </audio>
+
+    <button id="musicBtn" class="music-btn" onclick="toggleMusic()">🎵</button>
+
+    <!-- =========================================
+     MAIN APP
+========================================= -->
+
+    <main id="app">
+      <!-- =========================================
+       SCREEN 1
+       WELCOME
+  ========================================= -->
+
+      <section id="screen1" class="screen active welcome-screen">
+        <div class="stars"></div>
+
+        <div class="welcome-content">
+          <div class="small-label">A LITTLE SURPRISE FOR</div>
+
+          <div class="big-heart">❤️</div>
+
+          <h1>My Montuu</h1>
+
+          <div class="name">Prity Singh</div>
+
+          <p class="welcome-text">
+            Tomorrow is not just another day...
+
+            <br /><br />
+
+            It's the day the world got a little more beautiful.
+
+            <br /><br />
+
+            Because you were born. ❤️
+          </p>
+
+          <div class="birthday-date">
+            10
+
+            <span> August </span>
+          </div>
+
+          <button
+            id="surpriseBtn"
+            class="primary-btn"
+            onclick="startJourney()"
+            disabled
+          >
+            🔒 Opens at 12:00 AM
+          </button>
+
+          <!-- =========================================
+           BIRTHDAY COUNTDOWN
+      ========================================= -->
+
+          <div class="birthday-countdown">
+            <p class="countdown-label">
+              SOMETHING SPECIAL IS WAITING FOR YOU ❤️
+            </p>
+
+            <div class="countdown-boxes">
+              <div class="count-box">
+                <span id="countDays"> 00 </span>
+
+                <small> DAYS </small>
+              </div>
+
+              <div class="count-box">
+                <span id="countHours"> 00 </span>
+
+                <small> HOURS </small>
+              </div>
+
+              <div class="count-box">
+                <span id="countMinutes"> 00 </span>
+
+                <small> MINUTES </small>
+              </div>
+
+              <div class="count-box">
+                <span id="countSeconds"> 00 </span>
+
+                <small> SECONDS </small>
+              </div>
+            </div>
+
+            <div id="birthdayMessage" class="birthday-message">
+              10 AUGUST ❤️
+            </div>
+          </div>
+
+          <p class="hint">Psst... make sure you go till the end 😉</p>
+        </div>
+      </section>
+
+      <!-- =========================================
+       SCREEN 2
+       PRITY GALLERY
+  ========================================= -->
+
+      <section id="screen2" class="screen gallery-screen">
+        <div class="section-number">01</div>
+
+        <p class="small-label">THE GIRL BEHIND MY SMILE</p>
+
+        <h2>My Beautiful Montuu ❤️</h2>
+
+        <p class="section-intro">
+          There are millions of people in this world...
+
+          <br />
+
+          but somehow, I found you.
+        </p>
+
+        <div class="main-photo-card">
+          <img id="galleryImage" src="images/Prity1.jpeg" alt="Prity" />
+
+          <div class="photo-overlay">
+            <span id="photoCounter"> 1 / 5 </span>
+          </div>
+        </div>
+
+        <div class="photo-dots" id="photoDots"></div>
+
+        <p id="photoCaption" class="photo-caption">That smile... ❤️</p>
+
+        <div class="gallery-buttons">
+          <button class="round-btn" onclick="previousPhoto()">❮</button>
+
+          <button class="primary-btn small-btn" onclick="nextPhoto()">
+            Next ❤️
+          </button>
+
+          <button class="round-btn" onclick="nextPhoto()">❯</button>
+        </div>
+
+        <button class="primary-btn continue-btn" onclick="goToScreen(3)">
+          Continue to Our Story ❤️
+        </button>
+      </section>
+
+      <!-- =========================================
+       SCREEN 3
+       OUR STORY + MEMORIES
+  ========================================= -->
+
+      <section id="screen3" class="screen story-screen">
+        <div class="section-number">02</div>
+
+        <p class="small-label">WHERE IT ALL STARTED</p>
+
+        <h2>Our Little Story ❤️</h2>
+
+        <div class="story-timeline">
+          <div class="story-item">
+            <div class="timeline-heart">❤️</div>
+
+            <div class="story-content">
+              <span class="story-date"> 19 AUGUST 2024 </span>
+
+              <h3>The Beginning</h3>
+
+              <p>
+                The day I met you.
+
+                <br /><br />
+
+                I didn't know that the girl I met on that day would become my
+                Montuu...
+
+                <br /><br />
+
+                But something about that day stayed with me.
+              </p>
+            </div>
+          </div>
+
+          <div class="story-item">
+            <div class="timeline-heart">🚇</div>
+
+            <div class="story-content">
+              <span class="story-date"> HAUZ KHAS </span>
+
+              <h3>That Metro Station</h3>
+
+              <p>
+                Hauz Khas Metro Station.
+
+                <br /><br />
+
+                Just a place on a map for everyone else...
+
+                <br />
+
+                but for me, it became a part of our story.
+              </p>
+            </div>
+          </div>
+
+          <div class="story-item">
+            <div class="timeline-heart">💕</div>
+
+            <div class="story-content">
+              <span class="story-date"> OUR MEMORIES </span>
+
+              <h3>Then Came Us</h3>
+
+              <p>
+                Two years of conversations, laughter, silly moments, little
+                fights and countless memories.
+
+                <br /><br />
+
+                And honestly...
+
+                <br />
+
+                I wouldn't trade any of it.
+              </p>
+            </div>
+          </div>
+
+          <div class="story-item">
+            <div class="timeline-heart">🏠</div>
+
+            <div class="story-content">
+              <span class="story-date"> OUR LITTLE WORLD </span>
+
+              <h3>Just You & Me</h3>
+
+              <p>
+                Some of my favorite moments are simply the moments when we were
+                together.
+
+                <br /><br />
+
+                No special place. No big plans.
+
+                <br /><br />
+
+                Just us. ❤️
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- =========================================
+         MEMORY SLIDER
+    ========================================= -->
+
+        <div class="memory-slider">
+          <div class="memory-glow"></div>
+
+          <div class="memory-slide">
+            <img id="memoryImage" src="images/Memory1.jpeg" alt="Our Memory" />
+
+            <div class="memory-overlay">
+              <span id="memoryNumber">
+                <!-- MEMORY 01 / 04 -->
+              </span>
+
+              <h3 id="memoryTitle">One of my favorite moments ❤️</h3>
+
+              <p id="memoryCaption">Some moments are impossible to forget.</p>
+            </div>
+          </div>
+
+          <button class="memory-arrow memory-prev" onclick="previousMemory()">
+            ❮
+          </button>
+
+          <button class="memory-arrow memory-next" onclick="nextMemory()">
+            ❯
+          </button>
+
+          <div class="memory-thumbnails">
+            <div class="memory-thumb active" onclick="selectMemory(0)">
+              <img src="images/Memory1.jpeg" alt="Memory 1" />
+            </div>
+
+            <div class="memory-thumb" onclick="selectMemory(1)">
+              <img src="images/Memory2.jpeg" alt="Memory 2" />
+            </div>
+
+            <div class="memory-thumb" onclick="selectMemory(2)">
+              <img src="images/Memory3.jpeg" alt="Memory 3" />
+            </div>
+
+            <div class="memory-thumb" onclick="selectMemory(3)">
+              <img src="images/Memory4.jpeg" alt="Memory 4" />
+            </div>
+          </div>
+
+          <div class="memory-dots">
+            <span class="memory-dot active" onclick="selectMemory(0)"></span>
+
+            <span class="memory-dot" onclick="selectMemory(1)"></span>
+
+            <span class="memory-dot" onclick="selectMemory(2)"></span>
+
+            <span class="memory-dot" onclick="selectMemory(3)"></span>
+          </div>
+        </div>
+
+        <button class="primary-btn" onclick="goToScreen(4)">
+          Continue Our Story 💌
+        </button>
+      </section>
+
+      <!-- =========================================
+       SCREEN 4
+       LOVE LETTER
+  ========================================= -->
+
+      <section id="screen4" class="screen letter-screen">
+        <div class="section-number">03</div>
+
+        <div class="envelope" id="envelope" onclick="openLetter()">
+          <div class="envelope-top">💌</div>
+
+          <div class="envelope-body">
+            <span> For My Bauwaa </span>
+
+            <small> Tap to open </small>
+          </div>
+        </div>
+
+        <div id="letterContent" class="letter-content">
+          <p class="small-label">A LETTER FROM SONU</p>
+
+          <h2>Dear Prity... ❤️</h2>
+
+          <div class="letter-text">
+            <p>
+              I don't know if words can completely explain what you mean to me.
+            </p>
+
+            <p>
+              But I know one thing...
+
+              <br /><br />
+
+              Since 19 August 2024, my life has had one more beautiful person in
+              it.
+            </p>
+
+            <p>
+              I love your simplicity.
+
+              <br />
+
+              The fact that you don't need to show off or pretend.
+
+              <br /><br />
+
+              You are simply you.
+
+              <br /><br />
+
+              And that's exactly what I love.
+            </p>
+
+            <p>
+              We've had beautiful moments.
+
+              <br />
+
+              We've had silly moments.
+
+              <br />
+
+              We've had our little fights.
+
+              <br /><br />
+
+              But through everything...
+
+              <br /><br />
+
+              I still want the same thing.
+            </p>
+
+            <div class="highlight-love">
+              You.
+
+              <br />
+
+              Me.
+
+              <br />
+
+              Together.
+
+              <br />
+
+              Always. ❤️
+            </div>
+
+            <p>
+              Happy Birthday, my Montuu.
+
+              <br /><br />
+
+              I hope this year brings you everything you deserve.
+            </p>
+
+            <p>
+              And I hope...
+
+              <br /><br />
+
+              I get to keep making you smile for many more birthdays.
+            </p>
+
+            <div class="letter-signature">
+              With all my love,
+
+              <br />
+
+              <strong> Your Sonu ❤️ </strong>
+            </div>
+          </div>
+
+          <button class="primary-btn" onclick="goToScreen(5)">
+            Now Let's Play 😏🎮
+          </button>
+        </div>
+      </section>
+
+      <!-- =========================================
+       SCREEN 5
+       QUIZ
+  ========================================= -->
+
+      <section id="screen5" class="screen quiz-screen">
+        <div class="section-number">04</div>
+
+        <p class="small-label">TIME TO TEST YOU</p>
+
+        <h2>How Well Do You Know Sonu? 😏</h2>
+
+        <div class="quiz-card">
+          <div class="quiz-progress">
+            <div id="progressBar"></div>
+          </div>
+
+          <div id="quizNumber" class="quiz-number">Question 1</div>
+
+          <h3 id="quizQuestion"></h3>
+
+          <div id="quizAnswers" class="quiz-answers"></div>
+
+          <div id="quizFeedback" class="quiz-feedback"></div>
+        </div>
+      </section>
+
+      <!-- =========================================
+       SCREEN 6
+       HEART GAME
+  ========================================= -->
+
+      <section id="screen6" class="screen game-screen">
+        <div class="section-number">05</div>
+
+        <p class="small-label">ONE LAST GAME</p>
+
+        <h2>Catch My Hearts ❤️</h2>
+
+        <p class="section-intro">
+          Catch 10 hearts...
+
+          <br />
+
+          because apparently, you already caught mine. 😘
+        </p>
+
+        <div class="game-info">
+          <span>
+            Hearts:
+
+            <strong id="heartScore"> 0 </strong>
+
+            / 10
+          </span>
+        </div>
+
+        <div id="heartGame" class="heart-game"></div>
+
+        <button
+          id="startGameBtn"
+          class="primary-btn"
+          onclick="startHeartGame()"
+        >
+          Start Game ❤️
+        </button>
+
+        <div id="gameMessage" class="game-message"></div>
+      </section>
+
+      <!-- =========================================
+       SCREEN 7
+       SECRET MESSAGE
+  ========================================= -->
+
+      <section id="screen7" class="screen secret-screen">
+        <div class="secret-content">
+          <div class="secret-lock">🔐</div>
+
+          <p class="small-label">ONE LAST SECRET</p>
+
+          <h2>Only My Montuu Can Unlock This ❤️</h2>
+
+          <p>There is one little word that only you know...</p>
+
+          <input
+            type="text"
+            id="secretAnswer"
+            class="secret-input"
+            placeholder="Enter the secret word"
+            autocomplete="off"
+          />
+
+          <button class="primary-btn" onclick="unlockSecret()">
+            Unlock My Heart ❤️
+          </button>
+
+          <p id="secretError" class="secret-error"></p>
+        </div>
+      </section>
+
+      <!-- =========================================
+       SCREEN 8
+       LOVE MESSAGE
+  ========================================= -->
+
+      <section id="screen8" class="screen love-screen">
+        <div class="love-content">
+          <div class="love-heart">❤️</div>
+
+          <p class="small-label">JUST FOR YOU, MONTUU</p>
+
+          <h1>I LOVE YOU</h1>
+
+          <h2>SO MUCH, BAUWAA ❤️</h2>
+
+          <p class="love-message">
+            You are not just someone I love.
+
+            <br /><br />
+
+            You are someone with whom I want to share my little moments, my
+            happiness, my craziness, my silence and my future.
+          </p>
+
+          <p class="love-message">
+            I love your simplicity.
+
+            <br />
+
+            The fact that you don't need to show off or pretend.
+
+            <br /><br />
+
+            You are simply you.
+
+            <br /><br />
+
+            And that's exactly what I love.
+          </p>
+
+          <p class="love-message">
+            We met on
+            <strong> 19 August 2024 </strong>.
+
+            <br /><br />
+
+            And from that day, my favorite thing has been simply being with you.
+          </p>
+
+          <p class="love-message">
+            From our first memorable moment at Hauz Khas Metro Station to all
+            the little moments we've shared...
+          </p>
+
+          <p class="love-message">
+            And those moments when we were together in my PG...
+
+            <br /><br />
+
+            Those simple moments became some of my favorite memories.
+          </p>
+
+          <p class="love-message">
+            I just want one thing:
+
+            <br /><br />
+
+            <strong> To stay together. Always. ❤️ </strong>
+          </p>
+
+          <p class="love-message">
+            <strong> I LOVE YOU SO MUCH, BAUWAA ❤️ </strong>
+          </p>
+
+          <p class="love-signature">
+            Forever yours,
+
+            <br />
+
+            <strong> Sonu Singh ❤️ </strong>
+          </p>
+
+          <button class="primary-btn" onclick="goToScreen(9)">
+            One Last Surprise 🎁
+          </button>
+        </div>
+      </section>
+
+      <!-- =========================================
+       SCREEN 9
+       FINAL BIRTHDAY
+  ========================================= -->
+
+      <section id="screen9" class="screen final-screen">
+        <div id="confetti" class="confetti"></div>
+
+        <div class="final-content">
+          <div class="final-crown">👑</div>
+
+          <!-- FINAL PHOTO
+           USING PRITY3 AS REQUESTED -->
+
+          <div class="final-photo">
+            <img src="images/Prity3.jpeg" alt="My Montuu" />
+          </div>
+
+          <div class="big-heart final-heart">❤️</div>
+
+          <p class="small-label">TODAY IS ALL ABOUT YOU</p>
+
+          <h1>HAPPY BIRTHDAY</h1>
+
+          <h2>MY MONTUU</h2>
+
+          <div class="final-name">PRITY SINGH ❤️</div>
+
+          <p class="final-message">
+            Happy Birthday to the most beautiful part of my life.
+
+            <br /><br />
+
+            The world got you on 10 August...
+
+            <br /><br />
+
+            and somehow, I got lucky enough to have you in my life.
+          </p>
+
+          <div class="final-promise">
+            I don't know what tomorrow holds...
+
+            <br /><br />
+
+            But I know what I want.
+
+            <br /><br />
+
+            <strong>
+              You.
+
+              <br />
+
+              Me.
+
+              <br />
+
+              Together.
+
+              <br />
+
+              Always.
+            </strong>
+          </div>
+
+          <div class="final-love">I LOVE YOU SO MUCH, BAUWAA ❤️</div>
+
+          <div class="signature">— Sonu Singh</div>
+
+          <div class="final-hearts">❤️ 💕 ❤️ 💕 ❤️</div>
+
+          <button class="restart-btn" onclick="restartJourney()">
+            ❤️ See It Again
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
